@@ -1,0 +1,224 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bolder;
+}
+html {
+    margin: 0%;
+    padding: 0%;
+}
+body {
+    padding: 0%;
+    background: rgba( 10, 10, 10, 0.8);
+    width: 1400px;
+}
+.top {
+    margin: 0%;
+    background: rgba( 200, 200, 200, 1);
+    box-shadow: 0px 5px 7px rgba( 10, 10, 10, 0.8);
+    height: 80px;
+    width: 100vmax;
+    margin-bottom: -50px;
+}
+.title h1 {
+    margin: auto;
+    padding-top: 25px;
+    justify-self: center;
+    text-align: center;
+}
+.master {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 80px;
+    margin-left: 30px;
+}
+.color {
+    margin: auto;
+
+}
+.color p {
+    margin: auto;
+    margin-bottom: 0px;
+    margin-top: 5px;
+
+}
+.color-selection {
+    box-shadow: 2px 2px 6px black;
+    border: hidden;
+    border-radius: 10px;
+    background: black;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+}
+.container {
+    position: static;
+    display: grid;
+    background: rgba( 200, 200, 200, 1);
+    box-shadow: 3px 3px 7px black;
+    width: 600px;
+    height: 600px;
+    margin-left: -200px;
+    padding: 0%;
+}
+.square {
+    margin: auto;
+    margin: 0%;
+    border: 1px solid black;
+}
+.control {
+    background: rgba( 200, 200, 200, 1);
+    padding: 0%;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    box-shadow: 3px 3px 7px rgba( 10, 10, 10, 1);
+    border-radius: 15px;
+    width: 150px;
+    height: 600px;
+    margin-right: -100px;
+}
+.clear {
+    margin: auto;
+}
+.grid-create {
+    display: grid;
+    grid-template-rows: auto auto;
+    margin: auto;
+    margin-top: -5px;
+}
+.input-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 110px;
+    height: 30px;
+    border-radius: 10px;
+    border: hidden;
+    margin: auto;
+    box-shadow: 2px 2px 3px rgba( 10, 10, 10, 0.8);
+    text-align: center;
+    background: white;
+}
+.input-grid i {
+    margin: auto;
+    margin-top: 7px;
+    padding-left: 5px;
+    padding-top: 1px;
+    font-size: 12px;
+}
+#grid-dim {
+    margin: auto;
+    margin-top: 7px;
+    margin-left: 5px;
+    width: 80px;
+    height: 50;
+    border-radius: 10px;
+    border: hidden;
+    text-align: center;
+    outline: none;
+}
+.grid-create button {
+    width: 70px;
+    height: 40px;
+    margin: auto;
+    margin-top: 8px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgba( 10, 10, 10, 0.8);
+    background: rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+#clear-btn {
+    outline: none;
+    border-radius: 10px;
+    width: 90px;
+    height: 50px;
+    border: none;
+    box-shadow: 2px 2px 3px rgba( 10, 10, 10, 0.8);
+    background: rgba(0, 0, 0, 0.3);
+}
+.extra-btns {
+    display: grid;
+    grid-template-rows: auto auto;
+    margin: auto;
+    margin-top: 25px;
+}
+.instructions {
+    margin: auto;
+}
+#instructions-btn {
+    width: 120px;
+    height: 40px;
+    margin: auto;
+    border: none;
+    box-shadow: 2px 2px 3px rgba( 10, 10, 10, 0.8);
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 17px;
+    outline: none;
+}
+.dark-mode {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: -60px;
+    padding-top: 20px;
+    justify-self: center;
+}
+#dark-mode-btn {
+    margin: auto;
+    justify-self: center;
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+}
+#dark-mode-btn i {
+    font-size: 40px;
+}
+.colors {
+    display: grid;
+    grid-template-rows: auto auto;
+    margin-top: 50px;
+}
+.rainbow {
+    box-shadow: 2px 2px 6px black;
+    border-radius: 10px;
+    background-image: linear-gradient(60deg, red,orange,yellow,green,blue,indigo, red,orange,yellow,green,blue,indigo);
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    margin-top: -20px;
+}
+.rainbow:active {
+    transform: scale(0.9);
+}
+.rainbow-master {
+    margin: auto;
+    margin-top: 20px;
+}
+.rainbow-master p {
+    margin-top: 8px;
+}
+.eraser {
+    margin: auto;
+}
+.fa-eraser {
+    margin: auto;
+    font-size: 50px;
+    margin-top: -20px;
+}
+.fa-eraser:active {
+    transform: scale(0.9);
+}
+.btn:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+#clear-btn:hover{
+    background: rgba(0, 0, 0, 0.5);
+}
+#instructions-btn:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+.btn:active {
+    transform: scale(0.9);
+}

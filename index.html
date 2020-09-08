@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kumbh+Sans:wght@300&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vanilla-picker@2"></script>
+    <script src="https://kit.fontawesome.com/6a6f102d22.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="top">
+        <div class="title">
+            <h1>
+                ETCH-A-SKETCH
+            </h1>
+        </div>
+    </div>
+    <div class="master">
+        <div class="control">
+            <div class="clear">
+                <button class="btn" id="clear-btn">CLEAR</button>
+            </div>
+            <div class="grid-create">
+                <div class="input-grid">
+                <i class="fas fa-th"></i>
+                <input type="number" name="grid-dim" id="grid-dim">
+                </div>
+                <button class="btn" id="grid-create-btn">Build Grid</button>
+                <div class="extra-btns">
+                    <div class="instructions">
+                        <button class="btn" id="instructions-btn">How to use...</button>
+                    </div>
+                    <div class="dark-mode">
+                        <button class="btn" id="dark-mode-btn"><i class="fas fa-sun"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="colors">
+            <div class="color">
+            <div class="color-selection">      
+            </div>
+            <p>Choose a color</p>
+            </div>
+            <div class="rainbow-master">
+            <div class="rainbow" id="rainbow-btn">
+            </div>
+            <p>Go wild!</p>
+            </div>
+            <div class="eraser">
+                <i id="erase-btn" class="fas fa-eraser"></i>
+            </div>
+            </div>
+        </div>
+        <div id="container" class="container">
+        </div>
+    </div>
+</body>
+<script src="/scripts/script.js"></script>
+</html>
