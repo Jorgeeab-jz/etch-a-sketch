@@ -29,7 +29,7 @@ body {
 }
 .master {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     margin-top: 80px;
     margin-left: 30px;
 }
@@ -59,13 +59,13 @@ body {
     box-shadow: 3px 3px 7px black;
     width: 600px;
     height: 600px;
-    margin-left: -200px;
     padding: 0%;
+    border-radius: 5px;
 }
 .square {
     margin: auto;
     margin: 0%;
-    border: 1px solid black;
+    border: 1px ridge rgba(0, 0, 0, 0.1);
 }
 .control {
     background: rgba( 200, 200, 200, 1);
@@ -90,6 +90,7 @@ body {
 .input-grid {
     display: grid;
     grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
     width: 110px;
     height: 30px;
     border-radius: 10px;
@@ -106,6 +107,11 @@ body {
     padding-top: 1px;
     font-size: 12px;
 }
+.input-grid p {
+    margin: auto;
+    font-size: 10px;
+    width: 20px;
+}
 #grid-dim {
     margin: auto;
     margin-top: 7px;
@@ -116,6 +122,7 @@ body {
     border: hidden;
     text-align: center;
     outline: none;
+    font-size: 17px;
 }
 .grid-create button {
     width: 70px;
@@ -143,7 +150,7 @@ body {
     margin: auto;
     margin-top: 25px;
 }
-.instructions {
+.instructions-section {
     margin: auto;
 }
 #instructions-btn {
@@ -156,24 +163,24 @@ body {
     font-size: 17px;
     outline: none;
 }
-.dark-mode {
+.borders {
     margin: auto;
     margin-top: 10px;
     margin-bottom: -60px;
     padding-top: 20px;
     justify-self: center;
 }
-#dark-mode-btn {
+#border-btn {
     margin: auto;
     justify-self: center;
     width: 70px;
     height: 70px;
     border: none;
-    border-radius: 50%;
+    border-radius: 15px;
     outline: none;
 }
-#dark-mode-btn i {
-    font-size: 40px;
+#border-btn i {
+    font-size: 45px;
 }
 .colors {
     display: grid;
@@ -210,8 +217,55 @@ body {
 .fa-eraser:active {
     transform: scale(0.9);
 }
+.selected {
+    transform: scale(1.4);
+}
 .btn:hover {
     background: rgba(0, 0, 0, 0.5);
+}
+.instructions-master {
+    margin: auto;
+    margin-left: -30px;
+    background: rgba( 200, 200, 200, 1);
+    width: 300px;
+    height: 600px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 3px 3px 7px black;
+}
+.logo {
+    margin: auto;
+    position: absolute;
+    margin-left: 10px;
+    transition-duration: 2s;
+    margin-top: -300px;
+}
+.instructions {
+    margin: auto;
+    transition-duration: 2s;
+    z-index: 9;
+    opacity: 0;
+}
+.inst-title {
+    margin: auto;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+.inst-list {
+    margin: auto;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.inst-list li {
+    margin-top: 20px;
+}
+.instructions-master h2 {
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
 }
 #clear-btn:hover{
     background: rgba(0, 0, 0, 0.5);
