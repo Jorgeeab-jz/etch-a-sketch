@@ -186,7 +186,7 @@ body {
 .colors {
     display: grid;
     grid-template-rows: auto auto;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 .rainbow {
     box-shadow: 2px 2px 6px black;

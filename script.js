@@ -11,7 +11,11 @@ let instCheck = false;
 let borderCheck = true;
 let clickCheck = false;
 
-let picker = new Picker(colors);
+let picker = new Picker({
+    parent: colors,
+    alpha: false,
+    editor: false,
+});
 picker.onDone = function (color) { //generates the color picker
     colors.style.cssText = `background: ${color.rgbString}`;
     pencilColor = color.rgbaString;
