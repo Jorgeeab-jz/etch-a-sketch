@@ -6,22 +6,39 @@ const colors = document.querySelector('.color-selection');
 const rainbowBtn = document.getElementById('rainbow-btn');
 const eraseBtn = document.getElementById('erase-btn');
 const container = document.getElementById('container');
-let pencilColor = 'black';
+let pencilColor = 'rgba(0,0,0,1)';
 let instCheck = false;
 let borderCheck = true;
+let clickCheck = false;
 
 let picker = new Picker(colors);
 picker.onDone = function (color) { //generates the color picker
-    colors.style.cssText = `background: ${color.rgbaString}`;
+    colors.style.cssText = `background: ${color.rgbString}`;
     pencilColor = color.rgbaString;
     colorGrid();
     
 }
+function borderManager (gridElement) { //Makes border selection stick
+    if (borderCheck) {
+        gridElement.style.cssText = 'border: 1px ridge rgba(0, 0, 0, 0.1)';
+    }else if (!borderCheck) {
+        gridElement.style.cssText = 'border: none';
+    }
+}
 function colorGrid () { //For solid color pencil
     let gridSquare = document.querySelectorAll('.square');
     gridSquare.forEach(gridSquare => {
+        let currentShade = 1;
         gridSquare.addEventListener('mouseenter', function(){
-            gridSquare.style.cssText = `background: ${pencilColor}`;
+            let currentColor = pencilColor.slice(0,-2);
+            if (clickCheck) {
+                if (currentShade < 9) {
+                    gridSquare.style.background = `${currentColor}0.${currentShade})`;
+                    currentShade += 2;
+                }else if (currentShade == 9) {
+                    gridSquare.style.background = `${currentColor}1)`;
+                }
+            }
         })
     })
 }
@@ -46,6 +63,7 @@ function clearGrid () {
     let gridSquare = document.querySelectorAll('.square');
     gridSquare.forEach(gridSquare => {
         gridSquare.style.background = 'rgba(0,0,0,0)';
+        borderManager(gridSquare);
     })
 }
 function rainbowColor () {
@@ -63,8 +81,8 @@ function eraser () {
     let gridSquare = document.querySelectorAll('.square');
     gridSquare.forEach(gridSquare => {
         gridSquare.addEventListener('mouseenter', function(){
-            gridSquare.style.cssText = `background: rgba(0,0,0,0)`;
-
+            gridSquare.style.background = `rgba(0,0,0,0)`;
+            borderManager(gridSquare);
         })
     })
 }
@@ -91,14 +109,17 @@ function borderToggle () {
     let gridSquare = document.querySelectorAll('.square');
     gridSquare.forEach(gridSquare => {
         if (borderCheck) {
-            gridSquare.style.cssText = 'border: none';
+            gridSquare.style.border = 'none';
         }else if (!borderCheck) {
-            gridSquare.style.cssText = 'border: 1px ridge rgba(0, 0, 0, 0.1)';
+            gridSquare.style.border = '1px ridge rgba(0, 0, 0, 0.1)';
         }
     })
     borderCheck = !borderCheck;
 }
 
+//Initial grid
+createGrid();
+colorGrid();
 
 //Buttons and their functions
 clearBtn.addEventListener('click', clearGrid);
@@ -121,3 +142,9 @@ eraseBtn.addEventListener('click', function(){
 colors.addEventListener('click', function (){showSelection(colors)});
 instBtn.addEventListener('click', showInstructions);
 borderBtn.addEventListener('click', borderToggle);
+container.addEventListener('mousedown', function(){
+    clickCheck = true;
+})
+container.addEventListener('mouseup', function(){
+    clickCheck = false;
+})

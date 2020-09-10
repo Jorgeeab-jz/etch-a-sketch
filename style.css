@@ -66,6 +66,7 @@ body {
     margin: auto;
     margin: 0%;
     border: 1px ridge rgba(0, 0, 0, 0.1);
+
 }
 .control {
     background: rgba( 200, 200, 200, 1);
@@ -218,7 +219,7 @@ body {
     transform: scale(0.9);
 }
 .selected {
-    transform: scale(1.4);
+    transform: scale(1.2);
 }
 .btn:hover {
     background: rgba(0, 0, 0, 0.5);

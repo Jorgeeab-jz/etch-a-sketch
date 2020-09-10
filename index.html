@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/vanilla-picker@2"></script>
     <script src="https://kit.fontawesome.com/6a6f102d22.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body ondragstart="return false;" ondrop="return false;">
     <div class="top">
         <div class="title">
             <h1>
@@ -25,7 +25,7 @@
             <div class="grid-create">
                 <div class="input-grid">
                 <i class="fas fa-th"></i>
-                <input type="number" name="grid-dim" id="grid-dim">
+                <input type="number" name="grid-dim" id="grid-dim" value="40" max="64">
                 </div>
                 <button class="btn" id="grid-create-btn">Build Grid</button>
                 <div class="extra-btns">
