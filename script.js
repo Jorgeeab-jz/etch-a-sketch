@@ -73,7 +73,9 @@ function rainbowColor () {
             let x = Math.floor(Math.random() * 256);
             let y = Math.floor(Math.random() * 256);
             let z = Math.floor(Math.random() * 256);
-            gridSquare.style.cssText = `background: rgb(${x},${y},${z})`;
+            if (clickCheck) {
+                gridSquare.style.cssText = `background: rgb(${x},${y},${z})`;
+            }
         })
     })
 }
@@ -81,8 +83,10 @@ function eraser () {
     let gridSquare = document.querySelectorAll('.square');
     gridSquare.forEach(gridSquare => {
         gridSquare.addEventListener('mouseenter', function(){
-            gridSquare.style.background = `rgba(0,0,0,0)`;
-            borderManager(gridSquare);
+            if (clickCheck) {
+                gridSquare.style.background = `rgba(0,0,0,0)`;
+                borderManager(gridSquare);
+            }
         })
     })
 }
