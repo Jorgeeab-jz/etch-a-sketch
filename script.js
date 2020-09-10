@@ -46,7 +46,7 @@ function createGrid () {
     let inpNum = document.getElementById('grid-dim').value;
     let gridTemp = inpNum * inpNum;
     container.innerHTML = ``;
-    if (inpNum < 65) {
+    if (inpNum < 101) {
         for (i = 0; i < gridTemp; i++) {
             let square = document.createElement('div');
             square.classList.add('square');
