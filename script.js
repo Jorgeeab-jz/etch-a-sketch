@@ -57,7 +57,16 @@ function createGrid () {
             container.appendChild(square);
         
         }
-
+    }else if (inpNum > 100){
+        document.getElementById('grid-dim').value = 100; 
+        gridTemp = 10000;
+        for (i = 0; i < gridTemp; i++) {
+            let square = document.createElement('div');
+            square.classList.add('square');
+            container.appendChild(square);
+        
+        }
+        inpNum = 100;
     }
     container.style.gridTemplateRows = `repeat(${inpNum}, 1fr)`;
     container.style.gridTemplateColumns = `repeat(${inpNum}, 1fr)`;
@@ -70,7 +79,7 @@ function clearGrid () {
         borderManager(gridSquare);
     })
 }
-function rainbowColor () {
+function setRainbowColor () {
     let gridSquare = document.querySelectorAll('.square');
     gridSquare.forEach(gridSquare => {
         gridSquare.addEventListener('mouseenter', function(){
@@ -83,7 +92,7 @@ function rainbowColor () {
         })
     })
 }
-function eraser () {
+function setEraserPencil () {
     let gridSquare = document.querySelectorAll('.square');
     gridSquare.forEach(gridSquare => {
         gridSquare.addEventListener('mouseenter', function(){
@@ -140,11 +149,11 @@ buildBtn.addEventListener('click', function(){
     }
 });
 rainbowBtn.addEventListener('click', function(){
-    rainbowColor();
+    setRainbowColor();
     showSelection(rainbowBtn)
 });
 eraseBtn.addEventListener('click', function(){
-    eraser();
+    setEraserPencil();
     showSelection(eraseBtn);
 });
 colors.addEventListener('click', function (){showSelection(colors)});
@@ -156,3 +165,7 @@ container.addEventListener('mousedown', function(){
 container.addEventListener('mouseup', function(){
     clickCheck = false;
 })
+
+document.querySelector('body').addEventListener('mousedown', function(e) {
+    e.preventDefault();
+});
