@@ -166,6 +166,6 @@ container.addEventListener('mouseup', function(){
     clickCheck = false;
 })
 
-document.querySelector('body').addEventListener('mousedown', function(e) {
+document.querySelector('body').addEventListener('click', function(e) {
     e.preventDefault();
 });
